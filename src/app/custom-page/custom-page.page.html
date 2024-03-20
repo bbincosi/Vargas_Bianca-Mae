@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        CustomPage
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+      <ion-toolbar>
+        <ion-title size="large">Custom Page</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <div id="container">
+        <ion-button href = "custom-page/custom-page-with-id"> Go to Custom Page </ion-button>
+    <ion-button href="custom-page/"> Go to Custom Page by LINK </ion-button>
+    <ion-button (click) = "goToCustomPage()"> Go to Custom Page by EVENT </ion-button>
+    </div>
+  </ion-content>
+  
