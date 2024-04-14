@@ -26,8 +26,8 @@ const routes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
       },
       {
-        path: 'calculator',
-        loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule)
+        path: 'components',
+        loadChildren: () => import('./component/component.module').then( m => m.ComponentPageModule)
       },
     ]
   },
