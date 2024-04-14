@@ -1,0 +1,32 @@
+
+  <div class="container">
+    <ion-header>
+      <ion-toolbar>
+        <ion-label>
+          <ion-text color="tertiary">
+            <h2 class="ion-text-center">Add Vehicle </h2>
+          </ion-text>
+        </ion-label>
+        <ion-buttons slot="end">
+          <ion-button (click)="closeModal()">
+            <ion-icon name="close-outline" color="danger"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-item>
+      <ion-input class="" type="text" label="Name" labelPlacement="stacked" placeholder="Enter name"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input class="" type="number" label="Age" labelPlacement="stacked" placeholder="Enter Age"
+        required>
+      </ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-button color="success" (click)="Enter()"> Save </ion-button>
+      <ion-button color="danger" (click)="Enter()"> Back </ion-button>
+    </ion-item>

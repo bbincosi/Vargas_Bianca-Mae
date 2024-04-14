@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Welcome!</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content> Welcome to the App </ion-card-content>
+    <div class="input">
+
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text" [(ngModel)]="user" class="custom-input"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="pass" class="custom-input"></ion-input>
+      </ion-item>
+
+    </div>
+
+  </ion-card>
+
+  <div class="container">
+    <ion-button (click)="login()" color="success" shape="square"
+      >Login</ion-button>
+  </div>
+</ion-content>
