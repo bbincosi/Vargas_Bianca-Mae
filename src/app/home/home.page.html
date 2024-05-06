@@ -1,140 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      My Portfolio
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-
-<div class="about">
-
-  <div class="profile">
-    <label>BIANCA MAE D. VARGAS</label>
-    <img src="../../assets/iconp/im3.jpg" id="me">
-</div>
-  <div class="aboutme">
-      <label>ABOUT ME</label>
-      <p> Hi! I'm Bianca Mae D. Vargas and I go by “bbincosi” as my nickname online~ I'm
-          an IT student with a few hobbies like sketching, pixel arts, reading manga/books,
-          playing games, and sleeping is my one of the favorite these days. I also like
-          doing karaoke alone or with my friends or just singing in general.</p>
+<ion-content>
+  <div id="container">
+    
+    <h1><b>MUSIC</b></h1>
+  
+    <div class="content" *ngFor="let user of userList">
+      <div class="content-box">
+        <div class="content-all">
+          <h2>Artist: {{user.artist}} </h2>
+          <h2>Title: {{user.title}} </h2>
+          <h2>Music Genre: {{user.musicGenre}} </h2>
+          <h2>Age: {{user.age}} </h2>
+          <h2>isActive: {{user.isActive}} </h2>
+          <h2>Started: {{user.started}} </h2>
+        </div>
+        <div class="btn">
+          <ion-button color="success" (click)="update(user)">UPDATE</ion-button>
+          <ion-button color="danger" (click)="delete(user)" *ngIf="user.id">DELETE</ion-button>
+        </div>
+      </div>
+    </div>
+    <div class ="lg">
+      <ion-button color="danger" (click)="logout()">Log Out</ion-button>
+    </div>
   </div>
-
-  
-    <nav>
-    <div class="hobbies">
-      <div class ="hobs">
-        <label>HOBBIES</label>
-          <li> Reading books/manga </li>
-          <li> Traveling </li>
-          <li> Karaoke </li>
-          <li> Sleeping</li>
-        </div>
-
-        <div class = "likes">
-        <label>LIKES</label> 
-          <li> Animals </li>
-          <li> Art sketches </li>
-          <li> desserts </li>
-          <li> rainy season </li>
-          <li> BTS </li>
-          <li> SEVENTEEN (Mingyu, Vernon) </li>
-        </div>
-
-        <div class = "talents">
-        <label>TALENTS</label>
-          <li> Singing </li>
-          <li> Dancing </li>
-        </div>
-
-        <div class = "skills">
-        <label>SKILLS</label>
-          <li> Pixels/Traditional Arts </li>
-          <li> Music </li>
-          <li> Sports </li>
-        </div>
-
-        <div class = "five">
-          <label> How do you see yourself in 5 years? </label>
-          <p> I see myself, may or may not be graduated with an IT degree as I now truly know that I want to pursue a 
-            Business degree. But doing so at this moment is a crucial move. Maybe after this degree, I'll study again 
-            to acquire it. I also see that the small business that I manage online will grow much more than now, and 
-            I can see myself investing my income in what matters.
-          </p>
-        </div>
-      
-        <div class ="Strwt">
-          <label> Strength </label>
-          <li> Committed on the given task </li>
-          <li> Engaging in an argumentative content conversation </li>
-          <li> Giving their utmost capability on a task </li>
-          <li> Focused on the very goal of the team</li>
-          <li> Gets along and has a healthy connection with the team </li>
-
-          <label> Weaknesses </label>
-          <li> May get an ick from a teammate and not address it </li>
-          <li> Noisy environment </li>
-          <li> Getting overwhelmed by minor inconveniences and may get irritated easily </li>
-          <li> Dislikes conversation with no substance </li>
-          <li> Getting ticked off by people that have no manners </li>
-        </div>
-
-    <div class="motto">
-      <label>MOTTO </label>
-      <p> "Respect begets respect"</p>
-      </div>
-    
-      <div class = "language">
-        <label> YOUR LOVE LANGUAGE, AND WHY? </label>
-        <p> My preferred love language is Word of Affirmation as well as Physical Touch. Maybe the reason why 
-          I chose these is because they make me feel appreciated whenever someone gives an actual compliment. 
-          It does make me feel seen. And whenever the people that I cherished with no prevail, showing their love 
-          to me. My last love language that I enjoy the most without realizing it is Quality Time.
-        </p>
-      </div>
-      <div class = "food">
-        <label> If you are a food, what are you? </label>
-        <p> If I may given a chance to be a food, I will choose to be sweets or any desserts. No added connotation, I just
-          like desserts.
-        </p>
-      </div>
-      <div class ="peeves">
-        <label> PET PEEVES </label>
-        <li> no manners </li>
-        <li> not saying thank you after a request </li>
-        <li> not taking responsible/ getting accountable for what they did </li>
-        <li> lies </li>
-        <li> Superiority complex </li>
-        <li> too shallow to have a conversation with </li>
-        <li> no substance </li>
-        <li> can't say sorry </li>
-        <li> Noisy </li>
-      </div>
-      
-       </div>
-      </nav>
-    
-  
-
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-        <ion-icon name="add"></ion-icon>
+    <ion-fab-button (click)="addMusic()">
+      <ion-icon name="add"></ion-icon>
     </ion-fab-button>
-    <ion-fab-list side="top">
-        <ion-fab-button>
-            <ion-icon name="logo-facebook"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-button>
-            <ion-icon name="logo-twitter"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-button>
-            <ion-icon name="logo-instagram"></ion-icon>
-        </ion-fab-button>
-    </ion-fab-list>
   </ion-fab>
+</ion-content>
 
 
+    
+  
 
+  
 

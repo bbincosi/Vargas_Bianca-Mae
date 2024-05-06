@@ -1,0 +1,19 @@
+*{
+    --ion-background-color:peachpuff;
+  }
+  #input {
+    background-color: #307860;  
+  }
+
+  #AddBtn {
+    text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%);
+  }
+  .AddBtn {
+    display: flex;
+    justify-content: center;
+  }

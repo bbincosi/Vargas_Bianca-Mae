@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Create 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="input">
+
+  <ion-input type="text" [(ngModel)]="users.title" required placeholder="Title"></ion-input>
+  <ion-input type="text" [(ngModel)]="users.artist" required placeholder="Artist"></ion-input>
+  <ion-select label="Music Genre" multiple="true" [(ngModel)]="users.musicGenre">
+    <ion-select-option *ngFor="let music of musics" [value]="music">{{ music }}</ion-select-option>
+  </ion-select>
+  <ion-input type="number" [(ngModel)]="users.age" required placeholder="Age"></ion-input>
+  <ion-item>
+    <ion-select label="Still Alive " interface="popover" placeholder="Select" [(ngModel)]="users.isActive">
+      <ion-select-option value="true">Yes(True)</ion-select-option>
+      <ion-select-option value="false">No(False)</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <input type="date" [(ngModel)]="users.started" required placeholder="Date">
+
+
+<div class="addBtn">
+  <ion-button (click)="createUser()">CREATE</ion-button>
+</div>
+
+</div>
+</ion-content>
